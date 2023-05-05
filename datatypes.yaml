@@ -8,13 +8,13 @@ job: 'web developer'
 #multiline strings
 
 #add a pipe in front of the string for multiline
----
+
 bio: |
   hello my name is Kat.
   I am a full stack developer learning yaml. 
 
 
----
+
 # write a single line in multiple lines
 message: >
   this will
@@ -24,7 +24,7 @@ message: >
 messages2: this will all be one single line
 #same as above example with >
 
----
+
 
 number: 5473
 marks: 90.34
@@ -33,7 +33,7 @@ alsoBooleanValue: true
 
 #booleans can be yes/no, on/off, true/false, y/n, Y/N, True/False, TRUE/FALSE
 
----
+
 #specifying the data type
 zero: !!int 0
 positiveNum: !!int 45
@@ -43,7 +43,7 @@ octalNum: !!int 06574
 
 
 #floating point numbers
-marks: !!float 56.89
+mark: !!float 56.89
 infinity: !!float .inf
 
 
@@ -55,5 +55,11 @@ example: !!null null #or Null, or NULL
 
 
 
+#dates and time can be added as well
+date: !!timestamp 2023-05-04
+
+
+#exponential numbers
+exponential: 6.5E43
 
 
