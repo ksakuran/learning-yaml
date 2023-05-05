@@ -1,10 +1,21 @@
+#key value pairs
 "apple" : "I am a red fruit"
 1: "this is Kinal's roll number"
 
 #yaml is case sensitive
-
+---
 #lists
 - apple
 - mango
 - banana
 
+---
+#block style
+
+cities:
+- Vancouver
+- Toronto
+- Winnipeg
+...
+
+#... means document has ended
