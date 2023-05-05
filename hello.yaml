@@ -16,6 +16,14 @@ cities:
 - Vancouver
 - Toronto
 - Winnipeg
+
+---
+#flow type
+cities: [Vancouver, Toronto, Winnipeg]
+
+---
+
+{mango: "yellow fruit", age: 56}
 ...
 
 #... means document has ended

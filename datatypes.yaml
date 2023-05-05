@@ -1,0 +1,9 @@
+#String Variables in YAML
+name: Kat Nishimura
+fruit: "apple"
+job: 'web developer'
+
+#can have no quotations, single or double quotations
+
+#multiline strings
+
