@@ -7,3 +7,53 @@ job: 'web developer'
 
 #multiline strings
 
+#add a pipe in front of the string for multiline
+---
+bio: |
+  hello my name is Kat.
+  I am a full stack developer learning yaml. 
+
+
+---
+# write a single line in multiple lines
+message: >
+  this will
+  all be
+  in one single line
+
+messages2: this will all be one single line
+#same as above example with >
+
+---
+
+number: 5473
+marks: 90.34
+booleanValue: no
+alsoBooleanValue: true
+
+#booleans can be yes/no, on/off, true/false, y/n, Y/N, True/False, TRUE/FALSE
+
+---
+#specifying the data type
+zero: !!int 0
+positiveNum: !!int 45
+# binaryNum: !!int 0b11001
+octalNum: !!int 06574
+# hexa: !!in 0x45
+
+
+#floating point numbers
+marks: !!float 56.89
+infinity: !!float .inf
+
+
+not a num: .nan
+
+boolean: !!bool true
+
+example: !!null null #or Null, or NULL
+
+
+
+
+
