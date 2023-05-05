@@ -1,0 +1,89 @@
+#sequence
+student: !!seq
+  - grade
+  - name
+  - id
+
+# can also type like this
+# student: [grade, name, id]
+
+#some of the keys of the seq will be empty
+#known as a sparse sequence
+
+sparse seq:
+  - a
+  - b
+  - 
+  - d
+
+#nested sequence
+
+food:
+  - fruits
+    - apple
+    - mango
+    - banana
+  - vegetables
+    - broccoli
+    - asparagus
+    - cauliflower
+
+---
+#key: value pairs are called maps
+#nested mappings: map within a map
+
+name: Kat Nishimura
+information:
+  age: 26
+  job: web developer
+
+#can also be written like this  --> role: {age: 26, job: web developer}
+
+
+#pairs: keys may have duplicate values 
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+#in json this becomes an array of hash tables
+# {
+#   "pair example": [
+#     [
+#       "job", 
+#        "student"
+#     ],
+#     [ 
+#       "job",
+#       "teacher"
+#     ]
+#   ]
+# }
+
+# !!set will allow you to have unique values
+
+# names: !!set
+
+#reusing values with anchors
+
+preferences: &likes
+  fruit: mango
+  vegetable: asparagus
+  coffee: latte
+  color: blue
+  scent: coconut
+  city: Los Angeles
+
+person1:
+  name: Katherine
+  <<: *likes
+  #to override redeclare
+  scent: vanilla
+  city: New York
+
+person2: 
+  name: John
+  <<: *likes
+  fruit: kiwi
+  coffee: americano
